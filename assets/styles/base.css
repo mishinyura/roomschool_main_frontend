@@ -13,6 +13,10 @@
 /* 576 px */
 @media (max-width: 36rem) {}
 
+[v-cloak] {
+  opacity: 0;
+}
+
 /* 
 _____________
 Подсказка
@@ -443,7 +447,7 @@ _____________
   right: 0;
   background: transparent;
   z-index: 1000;
-  transition: box-shadow .2s;
+  transition: box-shadow .2s, opacity .2s;
 }
 
 .header::before {
