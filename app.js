@@ -1,7 +1,7 @@
-import { Form } from '../../assets/scripts/components/Form.js'
-import { InputMask } from '../../assets/scripts/components/InputMask.js'
-import { Select } from '../../assets/scripts/components/Select.js'
-import { Header } from '../../assets/scripts/modules/Header.js'
+import { Form } from './assets/scripts/components/Form.js'
+import { InputMask } from './assets/scripts/components/InputMask.js'
+import { Select } from './assets/scripts/components/Select.js'
+import { Header } from './assets/scripts/modules/Header.js'
 
 function main() {
     const namePage = document.querySelector('meta[name="page"]').content
