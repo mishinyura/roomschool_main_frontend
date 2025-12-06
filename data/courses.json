@@ -13,7 +13,8 @@
     "rating": 5,
     "reviews": 3,
     "duration": 540,
-    "students": 15
+    "label": "popular",
+    "color": "purpure"
   },
   {
     "name": "Финансовая грамотность",
@@ -24,12 +25,13 @@
     },
     "slug": "financial_literacy",
     "price": 2490,
-    "discount": 10,
+    "discount": 50,
     "image": "/image.jpg",
     "rating": 5,
     "reviews": 3,
     "duration": 540,
-    "students": 15
+    "label": "recommendation",
+    "color": "blue"
   },
   {
     "name": "Правовая грамотность",
@@ -45,7 +47,8 @@
     "rating": 5,
     "reviews": 3,
     "duration": 540,
-    "students": 15
+    "label": "new",
+    "color": "green"
   },
   {
     "name": "Тайм-менеджмент",
@@ -61,22 +64,7 @@
     "rating": 5,
     "reviews": 3,
     "duration": 540,
-    "students": 15
-  },
-  {
-    "name": "Основы программирования",
-    "description": {
-      "short": "Познакомьтесь с миром IT и напишите свои первые программы",
-      "main": "Курс введёт школьников в программирование: алгоритмы, циклы, условия и базовые проекты",
-      "full": "Основы программирования — это первый шаг в мир технологий. На курсе подростки узнают, что такое алгоритмы, переменные, условия и циклы. Они создадут простые программы и игры, а также познакомятся с логикой, которая лежит в основе любой IT-профессии. Практика займёт ключевое место"
-    },
-    "slug": "programming_basics",
-    "price": 2990,
-    "discount": 20,
-    "image": "/image.jpg",
-    "rating": 5,
-    "reviews": 3,
-    "duration": 540,
-    "students": 15
+    "label": "soon",
+    "color": "red"
   }
 ]
