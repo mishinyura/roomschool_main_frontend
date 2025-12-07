@@ -1533,8 +1533,8 @@ _____________
   }
 
   .panel__btn {
-    min-width: 60px;
-    min-height: 60px;
+    min-width: 40px;
+    min-height: 40px;
     background-size: 60px;
   }
 
