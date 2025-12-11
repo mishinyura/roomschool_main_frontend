@@ -1,50 +1,45 @@
 import { Select } from '../../assets/scripts/components/Select.js';
-import { Header } from '../../assets/scripts/modules/Header.js';
+
+const { createApp } = Vue;
 
 function main() {
-    const header = new Header({
-        elements: {
-            header: ".header",
-            burger: "#burger",
-            searchBtn: ".panel__btn_search",
-            searchInput: ".panel__form",
-            chatBtn: ".header__chat-btn",
+    const headerSettings = {
+        data() {
+            return {
+                isOpenSubMenu: false,
+                isOpenSearch: false,
+                isScrolled: false
+            }
         },
-
-        handlers: {
-            header: {
-                target: 'window',
-                event: "scroll",
-                callback() {
-                    this.onScroll();
+        methods: {
+            toggleSubMenu() {
+                this.isOpenSubMenu = !this.isOpenSubMenu
+            },
+            toggleSearch() {
+                this.isOpenSearch = !this.isOpenSearch
+            },
+            handleScroll() {
+                this.isScrolled = window.scrollY > 50;
+            }
+        },
+        watch: {
+            isScrolled(newValue) {
+                const headerEl = document.querySelector('.header');
+                if (newValue) {
+                    headerEl.classList.add('scrolled');
+                } else {
+                    headerEl.classList.remove('scrolled');
                 }
-            },
-            burger: {
-                event: "click",
-                callback() {
-                    this.toggleMenu();
-                },
-            },
-            searchBtn: {
-                event: "click",
-                callback() {
-                    this.toggleSearch();
-                },
-            },
-            searchInput: {
-                event: "input",
-                callback(e) {
-                    this.searchData();
-                },
-            },
-            chatBtn: {
-                event: "click",
-                callback() {
-                    this.handleChat();
-                },
-            },
+            }
         },
-    });
+        mounted() {
+            window.addEventListener('scroll', this.handleScroll);
+        }
+    }
+
+
+    const headerApp = createApp(headerSettings)
+    headerApp.mount('.header')
 
     const sortedSelect = new Select({
         obj: '.filters__select',

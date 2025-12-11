@@ -22,7 +22,7 @@
     <link rel="icon" href="../../assets/media/icons/favicon.ico" type="image/x-icon">
     <link rel="apple-touch-icon" href="/apple-touch-icon.png">
     <script src="../../assets/libs/swiper/swiper-bundle.min.js" defer></script>
-
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
     <script type="module" src="./app.js" defer></script>
 </head>
 
@@ -88,38 +88,38 @@
         </symbol>
     </svg>
     <div class="notifications"></div>
-    <header class="header">
+    <header class="header" v-cloak>
         <div class="header__container">
-            <a href="#" class="header__logo">
+            <a href="/" class="header__logo">
                 <svg viewBox="0.4 0.1 80 32">
                     <use href="#logo-full-icon"></use>
                 </svg>
             </a>
             <nav class="header__nav">
-                <ul class="header__menu topmenu">
+                <ul :class="['header__menu topmenu', { 'active': isOpenSubMenu }]">
                     <li class="tobmenu__item">
-                        <a href="#" class="topmenu__link" data-text="Школа">
+                        <a href="/" class="topmenu__link" data-text="Школа">
                             Школа
                         </a>
                         <div class="topmenu__dropdown submenu">
                             <div class="submenu__col">
                                 <ul class="submenu__list">
                                     <li class="submenu__item">
-                                        <a href="#" class="submenu__link">
+                                        <a href="/pages/about/" class="submenu__link">
                                             <span class="submenu__name">
                                                 История школы
                                             </span>
                                         </a>
                                     </li>
-                                    <li class="submenu__item">
+                                    <!-- <li class="submenu__item">
                                         <a href="#" class="submenu__link">
                                             <span class="submenu__name">
                                                 Награды
                                             </span>
                                         </a>
-                                    </li>
+                                    </li> -->
                                     <li class="submenu__item">
-                                        <a href="#" class="submenu__link">
+                                        <a href="/pages/documents/" class="submenu__link">
                                             <span class="submenu__name">
                                                 Правовая информация
                                             </span>
@@ -133,8 +133,7 @@
                         </div>
                     </li>
                     <li class="tobmenu__item">
-                        <a href="/frontend/roomschool/pages/courses/index.html" class="topmenu__link"
-                            data-text="Программы">
+                        <a href="/pages/courses/" class="topmenu__link" data-text="Программы">
                             Программы
                         </a>
                         <div class="topmenu__dropdown submenu">
@@ -144,7 +143,7 @@
                                 </a>
                                 <ul class="submenu__list">
                                     <li class="submenu__item">
-                                        <a href="#" class="submenu__link">
+                                        <a href="/pages/develop/" class="submenu__link">
                                             <span class="submenu__name">
                                                 Основы программирования
                                             </span>
@@ -154,7 +153,7 @@
                                         </a>
                                     </li>
                                     <li class="submenu__item">
-                                        <a href="#" class="submenu__link">
+                                        <a href="/pages/develop/" class="submenu__link">
                                             <span class="submenu__name">
                                                 Базовое программирование на Python
                                             </span>
@@ -164,7 +163,7 @@
                                         </a>
                                     </li>
                                     <li class="submenu__item">
-                                        <a href="#" class="submenu__link">
+                                        <a href="/pages/develop/" class="submenu__link">
                                             <span class="submenu__name">
                                                 Базовое программирование на Go
                                             </span>
@@ -181,7 +180,7 @@
                                 </a>
                                 <ul class="submenu__list">
                                     <li class="submenu__item">
-                                        <a href="#" class="submenu__link">
+                                        <a href="/pages/develop/" class="submenu__link">
                                             <span class="submenu__name">
                                                 Финансовая граммотность
                                             </span>
@@ -191,7 +190,7 @@
                                         </a>
                                     </li>
                                     <li class="submenu__item">
-                                        <a href="#" class="submenu__link">
+                                        <a href="/pages/develop/" class="submenu__link">
                                             <span class="submenu__name">
                                                 Эмоциональная граммотность
                                             </span>
@@ -201,7 +200,7 @@
                                         </a>
                                     </li>
                                     <li class="submenu__item">
-                                        <a href="#" class="submenu__link">
+                                        <a href="/pages/develop/" class="submenu__link">
                                             <span class="submenu__name">
                                                 Юридическая граммотность
                                             </span>
@@ -211,7 +210,7 @@
                                         </a>
                                     </li>
                                     <li class="submenu__item">
-                                        <a href="#" class="submenu__link">
+                                        <a href="/pages/develop/" class="submenu__link">
                                             <span class="submenu__name">
                                                 Тайм-менеджмент
                                             </span>
@@ -221,7 +220,7 @@
                                         </a>
                                     </li>
                                     <li class="submenu__item">
-                                        <a href="#" class="submenu__link">
+                                        <a href="/pages/develop/" class="submenu__link">
                                             <span class="submenu__name">
                                                 Ораторское искусство
                                             </span>
@@ -235,7 +234,7 @@
                             <div class="submenu__col">
                                 <ul class="submenu__list">
                                     <li class="submenu__item">
-                                        <a href="#" class="submenu__link">
+                                        <a href="/pages/develop/" class="submenu__link">
                                             <span class="submenu__name">
                                                 Общая образовательная
                                             </span>
@@ -245,21 +244,21 @@
                                         </a>
                                     </li>
                                     <li class="submenu__item">
-                                        <a href="#" class="submenu__link">
+                                        <a href="/pages/develop/" class="submenu__link">
                                             <span class="submenu__name">
                                                 Профессиональная
                                             </span>
                                         </a>
                                     </li>
                                     <li class="submenu__item">
-                                        <a href="#" class="submenu__link">
+                                        <a href="/pages/develop/" class="submenu__link">
                                             <span class="submenu__name">
                                                 Международная
                                             </span>
                                         </a>
                                     </li>
                                     <li class="submenu__item">
-                                        <a href="#" class="submenu__link">
+                                        <a href="/pages/develop/" class="submenu__link">
                                             <span class="submenu__name">
                                                 Индивидуальная
                                             </span>
@@ -270,17 +269,17 @@
                         </div>
                     </li>
                     <li class="tobmenu__item">
-                        <a href="#" class="topmenu__link" data-text="Статьи">
+                        <a href="/pages/articles/" class="topmenu__link" data-text="Статьи">
                             Статьи
                         </a>
                     </li>
                 </ul>
             </nav>
             <div class="header__btns panel">
-                <form action="/" class="panel__form search">
+                <form action="/" :class="['panel__form search', { 'active': isOpenSearch }]">
                     <div class="search__head">
                         <h5 class="search__title">Поиск по сайту</h5>
-                        <button class="search__close" type="button"></button>
+                        <button class="search__close" type="button" @click="toggleSearch"></button>
                     </div>
                     <div class="search__input">
                         <label class="search__label">
@@ -308,7 +307,7 @@
                         </ul>
                     </div>
                 </form>
-                <button class="panel__btn panel__btn_search" tabindex="0">
+                <button class="panel__btn panel__btn_search" tabindex="0" @click="toggleSearch">
                 </button>
                 <a href="#" class="panel__btn panel__btn_login" tabindex="0">
                 </a>
@@ -317,7 +316,8 @@
                         Подобрать
                     </span>
                 </button>
-                <button class="panel__btn panel__btn_burger" id="burger" tabindex="0">
+                <button :class="['panel__btn panel__btn_burger', { 'open': isOpenSubMenu }]" id="burger" tabindex="0"
+                    @click="toggleSubMenu">
                     <span></span>
                 </button>
             </div>
@@ -350,9 +350,9 @@
                     <div class="develop__progress">
                         Загружаем магию...
                     </div>
-                    <button class="develop__btn">
+                    <a href="#callbackTitle" class="develop__btn">
                         Уведомить о запуске
-                    </button>
+                    </a>
                 </div>
             </div>
         </section>
@@ -360,13 +360,13 @@
     <footer class="footer">
         <div class="footer__form callback">
             <div class="callback__container">
-                <h3 class="callback__title">
+                <h3 class="callback__title" id="callbackTitle">
                     Оставьте Ваш телефон для связи
                 </h3>
                 <p class="callback__description">
                     Менеджер свяжется с вами в ближайшие 30 минут
                 </p>
-                <form action="/" method="post" class="callback__form">
+                <form action="/" method="post" class="callback__form" id="footerFormCallback">
                     <label class="callback__label">
                         <input type="text" placeholder="Имя" name="name" id="inputUserName" data-validate="name">
                     </label>

@@ -93,38 +93,38 @@
         </symbol>
     </svg>
     <div class="notifications"></div>
-    <header class="header">
+    <header class="header" v-cloak>
         <div class="header__container">
-            <a href="/frontend/roomschool/pages/index/index.html" class="header__logo">
+            <a href="/" class="header__logo">
                 <svg viewBox="0.4 0.1 80 32">
                     <use href="#logo-full-icon"></use>
                 </svg>
             </a>
             <nav class="header__nav">
-                <ul class="header__menu topmenu">
+                <ul :class="['header__menu topmenu', { 'active': isOpenSubMenu }]">
                     <li class="tobmenu__item">
-                        <a href="#" class="topmenu__link" data-text="Школа">
+                        <a href="/" class="topmenu__link" data-text="Школа">
                             Школа
                         </a>
                         <div class="topmenu__dropdown submenu">
                             <div class="submenu__col">
                                 <ul class="submenu__list">
                                     <li class="submenu__item">
-                                        <a href="#" class="submenu__link">
+                                        <a href="/pages/about/" class="submenu__link">
                                             <span class="submenu__name">
                                                 История школы
                                             </span>
                                         </a>
                                     </li>
-                                    <li class="submenu__item">
+                                    <!-- <li class="submenu__item">
                                         <a href="#" class="submenu__link">
                                             <span class="submenu__name">
                                                 Награды
                                             </span>
                                         </a>
-                                    </li>
+                                    </li> -->
                                     <li class="submenu__item">
-                                        <a href="#" class="submenu__link">
+                                        <a href="/pages/documents/" class="submenu__link">
                                             <span class="submenu__name">
                                                 Правовая информация
                                             </span>
@@ -138,7 +138,8 @@
                         </div>
                     </li>
                     <li class="tobmenu__item">
-                        <a href="/frontend/roomschool/pages/courses/index.html" class="topmenu__link" data-text="Программы">
+                        <a href="/pages/courses/" class="topmenu__link"
+                            data-text="Программы">
                             Программы
                         </a>
                         <div class="topmenu__dropdown submenu">
@@ -274,17 +275,17 @@
                         </div>
                     </li>
                     <li class="tobmenu__item">
-                        <a href="#" class="topmenu__link" data-text="Статьи">
+                        <a href="/pages/articles/" class="topmenu__link" data-text="Статьи">
                             Статьи
                         </a>
                     </li>
                 </ul>
             </nav>
             <div class="header__btns panel">
-                <form action="" class="panel__form search">
+                <form action="/" :class="['panel__form search', { 'active': isOpenSearch }]">
                     <div class="search__head">
                         <h5 class="search__title">Поиск по сайту</h5>
-                        <button class="search__close"  type="button"></button>
+                        <button class="search__close" type="button" @click="toggleSearch"></button>
                     </div>
                     <div class="search__input">
                         <label class="search__label">
@@ -297,31 +298,31 @@
                             Популярные запросы:
                         </span>
                         <ul class="search__list">
-                            <li class="search__item"  tabindex="0">
+                            <li class="search__item" tabindex="0">
                                 Программирование
                             </li>
-                            <li class="search__item"  tabindex="0">
+                            <li class="search__item" tabindex="0">
                                 Финансовая грамотность
                             </li>
-                            <li class="search__item"  tabindex="0">
+                            <li class="search__item" tabindex="0">
                                 AI в образовании
                             </li>
-                            <li class="search__item"  tabindex="0">
+                            <li class="search__item" tabindex="0">
                                 Эмоциональный интеллект
                             </li>
                         </ul>
                     </div>
                 </form>
-                <button href="#" class="panel__btn panel__btn_search" tabindex="0">
+                <button class="panel__btn panel__btn_search" tabindex="0" @click="toggleSearch">
                 </button>
                 <a href="#" class="panel__btn panel__btn_login" tabindex="0">
                 </a>
-                <button href="#" class="panel__btn panel__btn_chat panel__btn_grey" tabindex="0">
+                <button class="panel__btn panel__btn_chat panel__btn_grey" tabindex="0">
                     <span class="panel__btn-text">
                         Подобрать
                     </span>
                 </button>
-                <button href="#" class="panel__btn panel__btn_burger" id="burger" tabindex="0">
+                <button :class="['panel__btn panel__btn_burger', { 'open': isOpenSubMenu }]" id="burger" tabindex="0" @click="toggleSubMenu">
                     <span></span>
                 </button>
             </div>
