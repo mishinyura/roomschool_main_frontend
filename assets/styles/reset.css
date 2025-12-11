@@ -37,6 +37,7 @@
 
     /* Фоны для кнопок */
     --color-btn-blue: #8ad1fd;
+    --color-btn-dark-blue: #0AA6D7;
     --color-btn-white: #fff;
     --color-btn-white-transparent: rgba(255, 255, 255, 0.5);
     --color-btn-grey: #d0d0d0;
@@ -72,6 +73,7 @@
     --color-icon-red: #de2d2d;
     --color-icon-white: #fff;
     --color-icon-black: #000;
+    --color-icon-lenear-gradient-blue-purpure: linear-gradient(90deg, rgba(112, 174, 255, 1) 0%, rgba(191, 128, 255, 1) 100%);
 
     /* Цвета hover, active, focus эффекты */
     --color-action-black: #000;
@@ -79,6 +81,8 @@
     --color-action-grey: #e3e3e3;
     --color-action-blue: #0AA6D7;
     --color-action-dark-blue: #009dcd;
+    --color-action-dark-purpure: #6c2fff;
+    --color-action-purpure: #946dff;
     --color-action-light-blue: #ddf2ff;
 
 
@@ -117,8 +121,8 @@
 
     /* Радиусы и рамка*/
     --radius-sm: 2px;
-    --radius-md: 5px;
-    --radius-lg: 10px;
+    --radius-md: 8px;
+    --radius-lg: 15px;
     --radius-max: 25px;
 
     --border-blue: 1px solid #8ad1fd;
