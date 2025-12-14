@@ -1,0 +1,530 @@
+/* 1400 px */
+@media (max-width: 87.5rem) {}
+
+/* 1200 px */
+@media (max-width: 75rem) {}
+
+/* 992 px */
+@media (max-width: 62rem) {}
+
+/* 768 px */
+@media (max-width: 48rem) {}
+
+/* 576 px */
+@media (max-width: 36rem) {}
+
+[v-cloak] {
+  opacity: 0;
+}
+
+/* 
+_____________
+Подсказка
+_____________
+*/
+*[data-tip] {
+  position: relative;
+}
+
+*[data-tip]:after {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: max-content;
+  max-width: 300px;
+  padding: 2em;
+  opacity: 0;
+  visibility: hidden;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-classic);
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-text-min);
+  font-weight: 400;
+  background-color: var(--color-message-yellow);
+  content: attr(data-tip);
+  transition: opacity .2s, visibility .2s;
+}
+
+*[data-tip=""]::after {
+  display: none;
+}
+
+*[data-tip]:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+/* 
+_____________
+notifications
+_____________
+*/
+.notifications {
+  position: fixed;
+  right: 5px;
+  bottom: 5px;
+  width: 300px;
+  z-index: 100000;
+}
+
+.notifications__message {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  min-height: 40px;
+  padding: 1.5em;
+  border-radius: 5px;
+  box-shadow: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+  font-size: var(--font-size-descr-base);
+  background-color: rgba(138, 209, 253, 0.5);
+  backdrop-filter: blur(16px) saturate(150%);
+  -webkit-backdrop-filter: blur(16px) saturate(150%);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity .3s, visibility .3s;
+  z-index: 100000;
+}
+
+.notifications__message_error::before {
+  flex-shrink: 0;
+  display: inline;
+  width: 30px;
+  height: 30px;
+  background-image: url('../media/icons/error.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: '';
+}
+
+.notifications__message_ok::before {
+  flex-shrink: 0;
+  display: inline;
+  width: 30px;
+  height: 30px;
+  background-image: url('../media/icons/ok.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  content: '';
+}
+
+.notifications__message:not(:last-child) {
+  margin-bottom: 5px;
+}
+
+.notifications__message.show {
+  opacity: 1;
+  visibility: visible;
+}
+
+.notifications__btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+}
+
+.notifications__btn::before {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #262626;
+  content: '';
+  transform: rotate(45deg);
+}
+
+.notifications__btn::after {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #262626;
+  content: '';
+  transform: rotate(-45deg);
+}
+
+.notifications__descr {
+  font-family: var(--font-family-nunito);
+  font-size: var(--font-size-text-sm);
+  font-weight: 400;
+}
+
+/* 
+_____________
+Разметка MarkDown
+_____________
+*/
+.description_md h1 {
+  margin-bottom: 30px;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-title-max);
+  font-weight: 600;
+}
+
+.description_md h2 {
+  margin-bottom: 25px;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-title-lg);
+  font-weight: 600;
+}
+
+.description_md h3 {
+  margin-bottom: 20px;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-title-md);
+  font-weight: 600;
+}
+
+.description_md h4 {
+  margin-bottom: 15px;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-title-sm);
+  font-weight: 600;
+}
+
+.description_md h5 {
+  margin-bottom: 10px;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-title-xs);
+  font-weight: 600;
+}
+
+.description_md h6 {
+  margin-bottom: 5px;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-title-min);
+  font-weight: 600;
+}
+
+.description_md p {
+  margin-bottom: 15px;
+  font-family: var(--font-family-nunito);
+  font-size: var(--font-size-text-md);
+  font-weight: 400;
+}
+
+.description_md ul {
+  padding: 1em;
+  list-style: circle;
+}
+
+.description_md ol {
+  padding: 1em;
+}
+
+.description_md li {
+  font-family: var(--font-family-nunito);
+  font-size: var(--font-size-text-md);
+  font-weight: 400;
+}
+
+.description_md li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.description_md pre {
+  padding: 1em;
+  background-color: #262626;
+  color: #fff;
+}
+
+.description_md code {
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+/* 
+_____________
+Рейтинговые звезды
+_____________
+*/
+.rating {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.rating__stars {
+  position: relative;
+  width: 100px;
+  height: 20px;
+}
+
+.rating__stars::before {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url('/media/grey-stars.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  content: '';
+}
+
+.rating__img {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-image: url('/media/gold-stars.svg');
+  background-repeat: no-repeat;
+  background-size: 100px 20px;
+  background-position: 0 0;
+  z-index: 1;
+}
+
+.rating__count::after {
+  content: ' / 5';
+}
+
+/* 
+_____________
+Блок с мини статистикой (Количество видео, часов, учеников, тестов)
+_____________
+*/
+.stats-course__videos,
+.stats-course__hours,
+.rating-course,
+.testes-course {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-text-min);
+  font-weight: 400;
+  color: var(--color-text-grey);
+}
+
+.stats-course__videos::before,
+.stats-course__hours::before,
+.rating-course::before,
+.testes-course::before {
+  width: 15px;
+  height: 15px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  content: '';
+}
+
+.stats-course__videos::before {
+  mask: url('/media/icons/videos.svg ') no-repeat center / contain;
+  background-color: var(--color-icon-blue);
+}
+
+.stats-course__hours::before {
+  mask: url('/media/icons/clock.svg') no-repeat center / contain;
+  background-color: var(--color-icon-blue);
+}
+
+.rating-course::before {
+  mask: url('/media/icons/star.svg') no-repeat center / contain;
+  background-color: var(--color-icon-blue);
+}
+
+.testes-course::before {
+  mask: url('/media/icons/okey.svg') no-repeat center / contain;
+  background-color: var(--color-icon-blue);
+}
+
+.stats-course__videos::after {
+  content: 'видео';
+}
+
+.stats-course__hours::after {
+  content: 'ч.';
+  /* content: ''; */
+}
+
+.rating-course::after {
+  content: '/ 5';
+}
+
+.testes-course::after {
+  /* content: 'заданий'; */
+  content: '';
+}
+
+/* 
+_____________
+Кнопки
+_____________
+*/
+[class*="__btn_classic"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 1.1em;
+  border: var(--border-blue);
+  border-radius: var(--radius-max);
+  text-align: center;
+  font-weight: 500;
+  color: var(--color-text-black);
+  background-color: var(--color-btn-blue);
+  transition: background-color .1s, color .1s, box-shadow .1s;
+}
+
+[class*="__btn_classic"]:hover {
+  background-color: var(--color-action-blue);
+  box-shadow: 0 0 6px 0 var(--color-action-blue);
+  color: var(--color-action-white);
+}
+
+[class*="__btn_classic"]:focus-visible {
+  background-color: var(--color-action-blue);
+  box-shadow: 0 0 6px 0 var(--color-action-blue);
+  color: var(--color-action-white);
+}
+
+[class*="__btn_inversion"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 1.1em;
+  border: var(--border-blue);
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-weight: 500;
+  color: var(--color-text-blue);
+  transition: background-color .1s, color .1s, border-color .1s, box-shadow .1s;
+}
+
+[class*="__btn_inversion"]:hover {
+  background-color: var(--color-action-light-blue);
+  box-shadow: 0 0 6px 0 var(--color-action-blue);
+  border-color: var(--color-action-black);
+  color: var(--color-action-black);
+}
+
+[class*="__btn_inversion"]:focus-visible {
+  background-color: var(--color-action-light-blue);
+  box-shadow: 0 0 6px 0 var(--color-action-blue);
+  border-color: var(--color-action-black);
+  color: var(--color-action-black);
+}
+
+[class*="__btn_grey"] {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5em 1.1em;
+  border: var(--border-grey);
+  border-radius: var(--radius-md);
+  text-align: center;
+  font-weight: 500;
+  color: var(--color-text-white);
+  background-color: var(--color-btn-grey-transparent);
+  transition: background-color .1s, color .1s, border-color .1s, box-shadow .1s;
+}
+
+[class*="__btn_grey"]:hover {
+  background-color: var(--color-action-light-blue);
+  box-shadow: 0 0 6px 0 var(--color-action-white);
+  color: var(--color-action-black);
+}
+
+[class*="__btn_grey"]:focus-visible {
+  background-color: var(--color-action-light-blue);
+  box-shadow: 0 0 6px 0 var(--color-action-blue);
+  border-color: var(--color-action-black);
+  color: var(--color-action-black);
+}
+
+
+
+[class*="__btn_neon"] {
+  position: relative;
+  z-index: 20;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  max-width: 250px;
+  padding: 0.5em 1.1em;
+  border: none;
+  border-radius: var(--radius-max);
+  background-color: var(--color-btn-dark-blue);
+  color: var(--color-text-white);
+  cursor: pointer;
+  transition: background-color 0.2s, scale 0.2s;
+}
+
+[class*="__btn_neon"]::after {
+  position: absolute;
+  content: "";
+  z-index: -10;
+  inset: 0;
+  background: linear-gradient(-45deg, #00dbde 0%, #fc00ff 100%);
+  filter: blur(20px);
+  transform: translate3d(0, 0, 0) scale(0.95);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+[class*="__btn_neon"]:hover {
+  background-color: var(--color-action-purpure);
+}
+
+[class*="__btn_neon"]:focus-visible {
+  transform: rotate(-180deg);
+}
+
+[class*="__btn_neon"]:active {
+  scale: 0.9;
+}
+
+[class*="__btn_neon"]:hover::after {
+  filter: blur(30px);
+}
+
+[class*="__btn_neoninv"] {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  z-index: 20;
+  max-width: 250px;
+  padding: 0.5em 1.1em;
+  border: none;
+  border-radius: var(--radius-max);
+  background-color: var(--color-btn-grey);
+  color: var(--color-text-black);
+  cursor: pointer;
+  transition: background-color 0.2s, scale 0.2s, color 0.2s;
+}
+
+[class*="__btn_neoninv"]::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  z-index: -1;
+  background: linear-gradient(-45deg, #fc00ff 0%, #00dbde 100% );
+  filter: blur(20px);
+  transform: translate3d(0, 0, 0) scale(0.95);
+  transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+[class*="__btn_neoninv"]:hover {
+  background-color: var(--color-action-purpure);
+  color: var(--color-text-white);
+}
+
+[class*="__btn_neoninv"]:focus-visible {
+  transform: rotate(-180deg);
+}
+
+[class*="__btn_neoninv"]:active {
+  scale: 0.9;
+}
+
+[class*="__btn_neoninv"]:hover::after {
+  filter: blur(30px);
+}

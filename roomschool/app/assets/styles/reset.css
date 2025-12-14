@@ -1,0 +1,420 @@
+:root {
+    /*--свойство-предмет-модификация*/
+    /* Цвета */
+
+    /* Основные фоны для блоков и страниц */
+    --color-bg-white: #fff;
+    --color-bg-grey: #f8f8f8;
+    --color-bg-blue: #8AD1FD;
+    --color-bg-purpure: #C3B9DF;
+    --color-bg-dark-blue: #0AA6D7;
+    --color-bg-light-blue: #aedeed84;
+    --color-bg-red: #ffb7b7;
+    --color-bg-black-transparent: rgba(0, 0, 0, 0.4);
+    --color-bg-green: #7cffb9;
+    
+    /*
+    --color-bg-blue-radial-gradient: radial-gradient(circle at left top, #E8F6FF 0%, #8ad1fd59 53%);
+    --color-bg-purpure-radial-gradient: radial-gradient(circle at center 200px, #FFE6E6 0%, #c3b9df92 53%);
+    --color-bg-blue-linear-gradient: linear-gradient(236deg, rgba(189, 227, 252, 1) 0%, rgba(138, 209, 253, 1) 100%);
+    --color-bg-blue-purpure-linear-gradient: linear-gradient(135deg, rgb(138, 209, 253) 0%, rgb(195, 185, 223) 100%);
+    --color-bg-purpure-linear-gradient: linear-gradient(236deg, rgba(255, 230, 230, 1) 0%, rgba(195, 185, 223, 1) 100%);
+    --color-bg-blue-purpure-light-gradient: linear-gradient(318deg, rgb(213, 231, 255) 0%, rgb(238, 218, 255) 100%);
+    */
+
+    --color-bg-green-yellow-linear-gradient: linear-gradient(135deg, #A0E7E5 0%, #B4F8C8 50%, #FBE7C6 100%);
+    --color-bg-blue-grey-linear-gradient: linear-gradient(135deg, #E0EAFC 0%, #CFDEF3 100%);
+    --color-bg-blue-purpure-linear-gradient: linear-gradient(135deg, #9FD9FF 0%, #C6B4F9 100%);
+    --color-bg-purpure-pink-linear-gradient: linear-gradient(135deg, #FFD6A5 0%, #FFB5E8 100%);
+
+    /* Фон отдельных карточек */
+    --color-card-purpure: #f9f4ff;
+    --color-card-blue: #eff5fe;
+    --color-card-green: #e9fff5;
+    --color-card-red: #ffefef;
+    --color-card-white: #fff;
+    --color-card-grey: #f8f8f8;
+
+    /* Фоны для кнопок */
+    --color-btn-blue: #8ad1fd;
+    --color-btn-dark-blue: #0AA6D7;
+    --color-btn-white: #fff;
+    --color-btn-white-transparent: rgba(255, 255, 255, 0.5);
+    --color-btn-grey: #d0d0d0;
+    --color-btn-grey-transparent: rgba(208, 208, 208, 0.5);
+
+    /* Фон для лейблов, отметок (Новый, топ, продвинутый и тд) */
+    --color-label-blue-purpure-gradient: linear-gradient(90deg, rgba(112, 174, 255, 1) 0%, rgba(191, 128, 255, 1) 100%);
+    --color-label-green-blue-gradient: linear-gradient(90deg, rgba(0, 204, 10, 1) 0%, rgba(82, 235, 255, 1) 100%);
+    --color-label-red-orange-gradient: linear-gradient(93deg, rgba(255, 84, 84, 1) 0%, rgba(255, 226, 5, 1) 100%);
+    --color-label-pink-purpure-gradient: linear-gradient(90deg, rgba(191, 128, 255, 1) 0%, rgba(255, 100, 180, 1) 100%);
+    --color-label-grey: #d0d0d090;
+    --color-label-blue: #d6f5ff;
+    --color-label-dark-blue: #00a5d7;
+
+    --color-label-blue-transparent: rgba(135, 225, 255, 0.8);
+    --color-label-grey-transparent: rgba(208, 208, 208, 0.8);
+    --color-label-purpure-transparent: rgba(191, 128, 255, 0.8);
+    --color-label-green-transparent: rgba(0, 204, 10, 0.8);
+
+    /* Цвет текста */
+    --color-text-black: #000;
+    --color-text-blue: #46d1fb;
+    --color-text-grey: #7c7c7c;
+    --color-text-dark-grey: #4e4e4e;
+    --color-text-white: #fff;
+    --color-text-red: #de2d2d;
+    --color-text-purpure: #9436ff;
+
+    /* Фоны или цвета для иконок */
+    --color-icon-blue: #34a7ee;
+    --color-icon-purpure: #946dff;
+    --color-icon-green: #37d144;
+    --color-icon-red: #de2d2d;
+    --color-icon-white: #fff;
+    --color-icon-black: #000;
+    --color-icon-lenear-gradient-blue-purpure: linear-gradient(90deg, rgba(112, 174, 255, 1) 0%, rgba(191, 128, 255, 1) 100%);
+
+    /* Цвета hover, active, focus эффекты */
+    --color-action-black: #000;
+    --color-action-white: #fff;
+    --color-action-grey: #e3e3e3;
+    --color-action-blue: #0AA6D7;
+    --color-action-dark-blue: #009dcd;
+    --color-action-dark-purpure: #6c2fff;
+    --color-action-purpure: #946dff;
+    --color-action-light-blue: #ddf2ff;
+
+
+    --color-message-green: #7cffb9;
+    --color-message-yellow: #fff6bd;
+
+    --color-form-white-transparent: rgba(255, 255, 255, 0.2);
+
+    /* Отступы */
+    --padding-lr-container-desktop: 1.25em; /* 20px */
+    --padding-lr-container-tablet: 1em; /* 16px */
+    --padding-lr-container-mobile: 0.625em; /* 10px */
+
+    --padding-tb-container-desktop: 6.25rem; /* 100px */
+    --padding-tb-container-tablet: 3.125rem; /* 50px */
+    --padding-tb-container-mobile: 1.875rem; /* 30px */
+
+    --margin-bottom-title: 15px;
+    --margin-bottom-description: 30px;
+    --margin-cards: 15px;
+    --padding-cards: 1.5em;
+
+    /* Размеры */
+    --breakpoint-page-desktop: 87.5rem; /* 1400 px */
+    --breakpoint-page-laptop: 75rem; /* 1200 px */
+    --breakpoint-page-tablet: 62rem; /* 992 px */
+    --breakpoint-page-smartphone: 48rem; /* 768 px */
+    --breakpoint-page-mobile: 36rem; /* 576 px */
+
+    --max-width-container-desktop: 82.5rem; /* 1320px */
+    --max-width-container-laptop: 71.25rem; /* 1140 px */
+    --max-width-container-tablet: 60rem; /* 960 px */
+    --max-width-container-smartphone: 45rem; /* 720 px */
+    --max-width-container-mobile: 33.75rem; /* 540 px */
+
+
+    /* Радиусы и рамка*/
+    --radius-sm: 2px;
+    --radius-md: 8px;
+    --radius-lg: 15px;
+    --radius-max: 25px;
+
+    --border-blue: 1px solid #8ad1fd;
+    --border-black: 1px solid black;
+    --border-grey: 1px solid #cbcbcb;
+    --border-red: 1px solid #de2d2d;
+    --border-white: 1px solid #fff;
+
+    --shadow-classic: 0 0 15px 0 rgba(0, 0, 0, 0.2);
+    --shadow-podium: 0 5px 10px 0 rgba(0, 0, 0, 0.1);
+
+    /* Шрифты */
+    --font-family-montserrat: 'Montserrat', Arial, sans-serif;
+    --font-family-inter: 'Inter', Arial, sans-serif;
+    --font-family-nunito: 'Nunito', Arial, sans-serif;
+    --font-family-oswald: 'Oswald';
+    --font-family-roboto: 'Roboto Condensed';
+
+    --font-size-text-min: 0.8125rem; /* 13px */
+    --font-size-text-xs: 0.875rem; /* 14px */
+    --font-size-text-sm: 1rem; /* 16px */
+    --font-size-text-md: 1.125rem; /* 18px */
+    --font-size-text-lg: 1.25rem; /* 20px */
+    --font-size-text-max: 1.5rem; /* 24px */
+
+    --font-size-title-min: 0.875rem; /* 14px */
+    --font-size-title-xs: 1rem; /* h4... - 16px */
+    --font-size-title-sm: 1.125rem; /* 18px */
+    --font-size-title-md: 1.5rem; /* h3 - 24px */
+    --font-size-title-lg: 2rem; /* h1-h2 - 32px */
+    --font-size-title-max: 2.5rem; /* h1 - 40px */
+
+    /* Другое */
+    --cursor-point: url('/media/icons/cursor.cur') 0 0, auto;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/Montserrat-Light.woff2') format('woff2'),
+        url('../fonts/montserrat/Montserrat-Light.woff') format('woff'),
+        url('../fonts/montserrat/Montserrat-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/Montserrat-Regular.woff2') format('woff2'),
+        url('../fonts/montserrat/Montserrat-Regular.woff') format('woff'),
+        url('../fonts/montserrat/Montserrat-Regulat.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/Montserrat-Medium.woff2') format('woff2'),
+        url('../fonts/montserrat/Montserrat-Medium.woff') format('woff'),
+        url('../fonts/montserrat/Montserrat-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('../fonts/montserrat/Montserrat-Bold.woff2') format('woff2'),
+        url('../fonts/montserrat/Montserrat-Bold.woff') format('woff'),
+        url('../fonts/montserrat/Montserrat-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/nunito/Nunito-Bold.woff2') format('woff2'),
+        url('../fonts/nunito/Nunito-Bold.woff') format('woff'),
+        url('../fonts/nunito/Nunito-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/nunito/Nunito-Light.woff2') format('woff2'),
+        url('../fonts/nunito/Nunito-Light.woff') format('woff'),
+        url('../fonts/nunito/Nunito-Light.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Nunito';
+    src: url('../fonts/nunito/Nunito-Regular.woff2') format('woff2'),
+        url('../fonts/nunito/Nunito-Regular.woff') format('woff'),
+        url('../fonts/nunito/Nunito-Regular.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/inter/Inter-Regular.woff2') format('woff2'),
+        url('../fonts/inter/Inter-Regular.woff') format('woff'),
+        url('../fonts/inter/Inter-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/inter/Inter-Italic.woff2') format('woff2'),
+        url('../fonts/inter/Inter-Italic.woff') format('woff'),
+        url('../fonts/inter/Inter-Italic.otf') format('opentype');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/inter/Inter-Medium.woff2') format('woff2'),
+        url('../fonts/inter/Inter-Medium.woff') format('woff'),
+        url('../fonts/inter/Inter-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('../fonts/inter/Inter-Light.woff2') format('woff2'),
+        url('../fonts/inter/Inter-Light.woff') format('woff'),
+        url('../fonts/inter/Inter-Light.otg') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@keyframes heartbeat {
+    0% {
+        box-shadow: inset 0 0 10px 1px white;
+    }
+
+    /* «систола» — тень максимально раздута */
+    25% {
+        box-shadow: inset 0 0 40px rgba(255, 0, 64, 0.4);
+    }
+
+    35% {
+        box-shadow: inset 0 0 25px rgba(255, 0, 64, 0.25);
+    }
+
+    /* «диастола» — тень почти исчезла */
+    50% {
+        box-shadow: inset 0 0 0 rgba(255, 0, 64, 0);
+    }
+
+    60% {
+        box-shadow: inset 0 0 20px rgba(255, 0, 64, 0.35);
+    }
+
+    100% {
+        box-shadow: inset 0 0 0 rgba(255, 0, 64, 0);
+    }
+}
+
+@keyframes text-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+    font-family: var(--font-family-montserrat);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+h1 {
+    font-size: var(--font-size-title-max);
+    font-weight: 500;
+}
+
+h2,
+h3 {
+    font-size: var(--font-size-title-lg);
+    font-weight: 500;
+}
+
+h4,
+h5,
+h6 {
+    font-weight: 400;
+}
+
+p {
+    margin: 0;
+    font-family: var(--font-family-nunito);
+    font-size: var(--font-size-text-max);
+    font-weight: 400;
+    letter-spacing: 1.1px;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+a {
+    font-family: var(--font-family-nunito);
+    font-weight: 400;
+    letter-spacing: 1.1px;
+    text-decoration: none;
+    color: var(--color-text-black);
+    outline: none;
+    cursor: var(--cursor-point);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+button {
+    padding: 0;
+    background: none;
+    border: none;
+    outline: none;
+    font-family: var(--font-family-montserrat);
+    font-size: var(--font-size-text-md);
+    font-weight: 400;
+    cursor: var(--cursor-point);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+input {
+    border: none;
+    outline: none;
+}
+
+
+
+
+.body {
+    position: relative;
+    min-height: 100%;
+    min-width: 320px;
+    overflow-x: hidden;
+    /* background-color: var(--color-bg-grey); */
+}
+
+.icons {
+    display: none;
+}

@@ -1,0 +1,311 @@
+.hero{
+  background: var(--color-bg-blue-purpure-linear-gradient);
+}
+
+.hero__container {
+  max-width: var(--max-width-container-desktop);
+  margin: auto;
+  padding: var(--padding-tb-container-desktop) var(--padding-lr-container-desktop);
+  text-align: center;
+}
+
+.hero__title{
+  margin: 0 auto var(--margin-bottom-title);
+}
+
+.hero__descr{
+  max-width: 80%;
+  margin: auto;
+}
+
+
+/* 
+_____________
+Наша миссия
+_____________
+*/
+.mission__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  max-width: var(--max-width-container-desktop);
+  margin: auto;
+  padding: var(--padding-tb-container-desktop) var(--padding-lr-container-desktop);
+}
+
+.mission__content{
+  flex-basis: 50%;
+}
+
+.mission__title{
+  margin-bottom: var(--margin-bottom-title);
+}
+
+.mission__description{
+  margin-bottom: var(--margin-bottom-description);
+}
+
+.mission__image{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-basis: 50%;
+}
+
+.mission__image img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  object-position: center;
+}
+
+
+/* 
+_____________
+Наша философия
+_____________
+*/
+.vision{
+  background-color: var(--color-bg-grey);
+}
+.vision__container {
+  max-width: var(--max-width-container-desktop);
+  margin: auto;
+  padding: var(--padding-tb-container-desktop) var(--padding-lr-container-desktop);
+}
+.vision__head{
+  margin-bottom: var(--margin-bottom-description);
+  text-align: center;
+}
+.vision__title{
+  margin: 0 auto var(--margin-bottom-title);
+}
+
+.vision__description{
+  max-width: 80%;
+  margin: auto;
+}
+
+.vision__list{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  gap: var(--margin-cards);
+}
+
+.vision__item{
+  padding: var(--padding-cards);
+  border: var(--border-blue);
+  border-radius: var(--radius-lg);
+  background-color: var(--color-card-white);
+}
+
+.vision__item::before{
+  content: "";
+  display: block;
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+  background: var(--color-icon-lenear-gradient-blue-purpure);
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: contain;
+}
+
+.vision__item_focus::before{
+  mask-image: url('../../assets/media/icons/circles.svg');
+}
+
+.vision__item_care::before{
+  mask-image: url('../../assets/media/icons/like.svg');
+}
+
+.vision__item_evolution::before{
+  mask-image: url('../../assets/media/icons/chart.svg');
+}
+
+.vision__item_community::before{
+  mask-image: url('../../assets/media/icons/group.svg');
+}
+
+.vision__item_reliability::before{
+  mask-image: url('../../assets/media/icons/shield.svg');
+}
+
+.vision__item_expert::before{
+  mask-image: url('../../assets/media/icons/medal.svg');
+}
+
+.vision__subtitle{
+  margin-bottom: var(--margin-bottom-title);
+  font-size: var(--font-size-title-md);
+}
+
+.vision__text{
+  font-size: var(--font-size-text-md);
+}
+
+/* 
+_____________
+Наша история
+_____________
+*/
+.history__container {
+  max-width: var(--max-width-container-desktop);
+  margin: auto;
+  padding: var(--padding-tb-container-desktop) var(--padding-lr-container-desktop);
+}
+
+.history__title{
+  margin: 0 auto var(--margin-bottom-title);
+  text-align: center;
+}
+
+.history__item{
+  position: relative;
+  padding-left: 80px;
+}
+
+.history__item:not(:last-child){
+  margin-bottom: var(--margin-cards);
+}
+
+.history__item::before{
+  position: absolute;
+  left: 0;
+  content: attr(data-date);
+  display: block;
+  font-size: var(--font-size-title-md);
+  margin-bottom: var(--margin-bottom-title);
+  color: var(--color-text-blue);
+}
+
+.history__item::after{
+  position: absolute;
+  top: 12px;
+  left: 60px;
+  content: '';
+  width: 10px;
+  height: 2px;
+  background-color: var(--color-text-blue);
+}
+
+.history__subtitle{
+  margin-bottom: var(--margin-bottom-title);
+  font-size: var(--font-size-title-sm);
+  font-weight: 400;
+}
+.history__subdescr{
+  font-size: var(--font-size-text-sm);
+  /* color: var(--color-text-grey); */
+  font-weight: 300;
+}
+
+
+
+/* 1400 px */
+@media (max-width: 87.5rem) {
+  .hero__container {
+    max-width: var(--max-width-container-laptop);
+  }
+
+  .mission__container {
+    max-width: var(--max-width-container-laptop);
+  }
+  
+  .vision__container {
+    max-width: var(--max-width-container-laptop);
+  }
+  
+  .history__container {
+    max-width: var(--max-width-container-laptop);
+  }
+}
+
+/* 1200 px */
+@media (max-width: 75rem) {
+  .hero__container {
+    max-width: var(--max-width-container-tablet);
+    padding: var(--padding-tb-container-tablet) var(--padding-lr-container-tablet);
+  }
+
+  .mission__container {
+    max-width: var(--max-width-container-tablet);
+    padding: var(--padding-tb-container-tablet) var(--padding-lr-container-tablet);
+  }
+  
+  .vision__container {
+    max-width: var(--max-width-container-tablet);
+    padding: var(--padding-tb-container-tablet) var(--padding-lr-container-tablet);
+  }
+  
+  .history__container {
+    max-width: var(--max-width-container-tablet);
+    padding: var(--padding-tb-container-tablet) var(--padding-lr-container-tablet);
+  }
+}
+
+/* 992 px */
+@media (max-width: 62rem) {
+  .hero__container {
+    max-width: var(--max-width-container-smartphone);
+  }
+
+  .mission__container {
+    max-width: var(--max-width-container-smartphone);
+  }
+  
+  .vision__container {
+    max-width: var(--max-width-container-smartphone);
+  }
+  
+  .history__container {
+    max-width: var(--max-width-container-smartphone);
+  }
+}
+
+/* 768 px */
+@media (max-width: 48rem) {
+  .hero__container {
+    max-width: var(--max-width-container-mobile);
+    padding: var(--padding-tb-container-mobile) var(--padding-lr-container-mobile);
+  }
+
+  .mission__container {
+    max-width: var(--max-width-container-mobile);
+    padding: var(--padding-tb-container-mobile) var(--padding-lr-container-mobile);
+  }
+  
+  .vision__container {
+    max-width: var(--max-width-container-mobile);
+    padding: var(--padding-tb-container-mobile) var(--padding-lr-container-mobile);
+  }
+  
+  .history__container {
+    max-width: var(--max-width-container-mobile);
+    padding: var(--padding-tb-container-mobile) var(--padding-lr-container-mobile);
+  }
+}
+
+/* 576 px */
+@media (max-width: 36rem) {
+  .hero__container {
+    max-width: 100%;
+  }
+
+  .mission__container {
+    max-width: 100%;
+  }
+  
+  .vision__container {
+    max-width: 100%;
+  }
+  
+  .history__container {
+    max-width: 100%;
+  }
+}
+
+
+
