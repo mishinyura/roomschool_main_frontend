@@ -14,7 +14,7 @@
     "reviews": 3,
     "duration": 540,
     "videos": 70,
-    "label": "popular",
+    "label": "soon",
     "color": "purpure"
   },
   {
@@ -32,7 +32,7 @@
     "reviews": 3,
     "duration": 540,
     "videos": 70,
-    "label": "recommendation",
+    "label": "soon",
     "color": "blue"
   },
   {
@@ -50,7 +50,7 @@
     "reviews": 3,
     "duration": 540,
     "videos": 70,
-    "label": "new",
+    "label": "soon",
     "color": "green"
   },
   {
@@ -248,7 +248,7 @@
     "reviews": 2,
     "duration": 580,
     "videos": 52,
-    "label": "",
+    "label": "soon",
     "color": "red"
   }
 ]

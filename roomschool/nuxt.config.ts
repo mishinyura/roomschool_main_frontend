@@ -25,6 +25,29 @@ export default defineNuxtConfig({
         { key: 'og:image', property: 'og:image', content: 'https://roomschool.ru/preview.jpg' },
         // { name: 'description', content: 'Первая онлайн школа с AI поддержкой' },
         // { name: 'keywords', content: 'онлайн школа, образование, AI, курсы для детей' }
+      ],
+      link: [
+        {
+          rel: 'preload',
+          href: '/fonts/montserrat/Montserrat-Regular.woff2',
+          as: 'font',
+          type: 'font/woff2',
+          crossorigin: 'anonymous'
+        },
+        {
+          rel: 'preload',
+          href: '/fonts/montserrat/Montserrat-Medium.woff2',
+          as: 'font',
+          type: 'font/woff2',
+          crossorigin: 'anonymous'
+        },
+        {
+          rel: 'preload',
+          href: '/fonts/nunito/Nunito-Regular.woff2',
+          as: 'font',
+          type: 'font/woff2',
+          crossorigin: 'anonymous'
+        }
       ]
     }
   }

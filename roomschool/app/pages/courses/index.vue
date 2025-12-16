@@ -11,6 +11,7 @@
       </div>
     </section>
     <section class="main__section courses">
+      <!-- popular, new, recommendation, soon -->
       <div class="courses__container">
         <div class="courses__control filters">
           <div class="filters__control">
