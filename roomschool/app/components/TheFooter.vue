@@ -136,7 +136,7 @@
               </a>
             </li>
             <li class="bottommenu__item">
-              <a href="#" class="bottommenu__link" tabindex="0">
+              <a href="/documents/agreement_roomschool.pdf" class="bottommenu__link" tabindex="0">
                 Пользовательское соглашение
               </a>
             </li>

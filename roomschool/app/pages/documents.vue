@@ -37,7 +37,7 @@
           </p>
           <div class="docs__file">
             <span class="docs__exp">PDF</span>
-            <span class="docs__size">245 KB</span>
+            <span class="docs__size">256 KB</span>
           </div>
           <div class="docs__btns">
             <a
@@ -97,6 +97,74 @@
             <div class="docs__name">
               <span class="docs__type"> Соглашения </span>
               <a href="#" class="docs__title" target="_blank">
+                Пользовательское соглашение
+              </a>
+            </div>
+          </div>
+          <p class="docs__description">
+            Пользовательское соглашение для урегулирование договорных отношений между владельцем сайта и его посетителями
+          </p>
+          <div class="docs__file">
+            <span class="docs__exp">PDF</span>
+            <span class="docs__size">471 KB</span>
+          </div>
+          <div class="docs__btns">
+            <a
+              href="/documents/agreement_roomschool.pdf"
+              class="docs__btn docs__btn_download docs__btn_classic"
+              download
+              tabindex="0"
+            >
+              Скачать
+            </a>
+            <a
+              href="/documents/agreement_roomschool.pdf"
+              class="docs__btn docs__btn_open"
+              target="_blank"
+              tabindex="0"
+            ></a>
+          </div>
+        </article>
+        <article class="docs__card">
+          <div class="docs__head">
+            <div class="docs__icon docs__icon_agreement"></div>
+            <div class="docs__name">
+              <span class="docs__type"> Соглашения </span>
+              <a href="#" class="docs__title" target="_blank">
+                Согласие на распространение персональных данных
+              </a>
+            </div>
+          </div>
+          <p class="docs__description">
+            Оформляется при оставлении отзыва или загрузке фото в профиль. Строгое требование ст. 10.1 ФЗ-152
+          </p>
+          <div class="docs__file">
+            <span class="docs__exp">PDF</span>
+            <span class="docs__size">189 KB</span>
+          </div>
+          <div class="docs__btns">
+            <a
+              href="/documents/consent_dissemination_personal_data.pdf"
+              class="docs__btn docs__btn_download docs__btn_classic"
+              download
+              tabindex="0"
+            >
+              Скачать
+            </a>
+            <a
+              href="/documents/consent_dissemination_personal_data.pdf"
+              class="docs__btn docs__btn_open"
+              target="_blank"
+              tabindex="0"
+            ></a>
+          </div>
+        </article>
+        <article class="docs__card">
+          <div class="docs__head">
+            <div class="docs__icon docs__icon_agreement"></div>
+            <div class="docs__name">
+              <span class="docs__type"> Соглашения </span>
+              <a href="#" class="docs__title" target="_blank">
                 Соглашение на обработку персональных данных
               </a>
             </div>
@@ -106,11 +174,11 @@
           </p>
           <div class="docs__file">
             <span class="docs__exp">PDF</span>
-            <span class="docs__size">156 KB</span>
+            <span class="docs__size">297 KB</span>
           </div>
           <div class="docs__btns">
             <a
-              href="#"
+              href="/documents/consent_processing_personal_data.pdf"
               class="docs__btn docs__btn_download docs__btn_classic"
               download
               tabindex="0"
@@ -118,7 +186,41 @@
               Скачать
             </a>
             <a
-              href="#"
+              href="/documents/consent_processing_personal_data.pdf"
+              class="docs__btn docs__btn_open"
+              target="_blank"
+              tabindex="0"
+            ></a>
+          </div>
+        </article>
+        <article class="docs__card">
+          <div class="docs__head">
+            <div class="docs__icon docs__icon_agreement"></div>
+            <div class="docs__name">
+              <span class="docs__type"> Соглашения </span>
+              <a href="#" class="docs__title" target="_blank">
+                Маректинговое соглашение
+              </a>
+            </div>
+          </div>
+          <p class="docs__description">
+            Оформляется для своевременного информарования об участии в маркетинговых акциях
+          </p>
+          <div class="docs__file">
+            <span class="docs__exp">PDF</span>
+            <span class="docs__size">192 KB</span>
+          </div>
+          <div class="docs__btns">
+            <a
+              href="/documents/marketing_consent.pdf"
+              class="docs__btn docs__btn_download docs__btn_classic"
+              download
+              tabindex="0"
+            >
+              Скачать
+            </a>
+            <a
+              href="/documents/marketing_consent.pdf"
               class="docs__btn docs__btn_open"
               target="_blank"
               tabindex="0"
@@ -145,7 +247,7 @@
           </div>
           <div class="docs__btns">
             <a
-              href="#"
+              href="/documents/personal_data_processing_protection_policy.pdf"
               class="docs__btn docs__btn_download docs__btn_classic"
               download
               tabindex="0"
@@ -153,7 +255,7 @@
               Скачать
             </a>
             <a
-              href="#"
+              href="/documents/personal_data_processing_protection_policy.pdf"
               class="docs__btn docs__btn_open"
               target="_blank"
               tabindex="0"
