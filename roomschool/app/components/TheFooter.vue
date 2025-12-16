@@ -2,27 +2,29 @@
   <footer class="footer">
     <div class="footer__form callback">
       <div class="callback__container">
-        <h3 class="callback__title">Оставьте Ваш телефон для связи</h3>
+        <h3 class="callback__title" id="#callbackTitle">Оставьте Ваш телефон для связи</h3>
         <p class="callback__description">
           Менеджер свяжется с вами в ближайшие 30 минут
         </p>
         <form action="/" method="post" class="callback__form">
-          <label class="callback__label">
+          <label class="callback__input">
             <input
               type="text"
               placeholder="Имя"
               name="name"
               id="inputUserName"
               data-validate="name"
+              required
             />
           </label>
-          <label class="callback__label">
+          <label class="callback__input">
             <input
               type="text"
               placeholder="Телефон"
               name="phone"
               data-validate="phone"
               ref="inputPhoneNumber"
+              required
             />
           </label>
           <TheSelect />
@@ -53,6 +55,15 @@
               <li class="callback__item" data-method="whatsapp">What's app</li>
             </ul>
           </div> -->
+          <label class="callback__label">
+            <input type="checkbox" checked name="agreement" required>
+            <span class="callback__checkbox"></span>
+            <span class="callback__link">Отправляя вы соглашаетесь на 
+              <a href="/documents/consent_processing_personal_data.pdf" target="_blank">
+                обработку персональных данных
+              </a>
+            </span>
+          </label>
           <button class="callback__btn callback__btn_classic" type="submit">
             Отправить
           </button>
@@ -281,7 +292,7 @@ _____________
   margin: 0 10px;
 }
 
-.callback__label {
+.callback__input {
   position: relative;
   width: 100%;
   border-radius: 50px;
@@ -295,8 +306,8 @@ _____________
   align-items: center;
 }
 
-.callback__label::after,
-.callback__label::before {
+.callback__input::after,
+.callback__input::before {
   content: "";
   width: 100%;
   height: 100%;
@@ -304,7 +315,7 @@ _____________
   position: absolute;
 }
 
-.callback__label::before {
+.callback__input::before {
   top: -1px;
   left: -1px;
   background: linear-gradient(
@@ -315,7 +326,7 @@ _____________
   z-index: -1;
 }
 
-.callback__label::after {
+.callback__input::after {
   bottom: -1px;
   right: -1px;
   background: linear-gradient(
@@ -328,7 +339,7 @@ _____________
   z-index: -2;
 }
 
-.callback__label input {
+.callback__input input {
   padding: 10px;
   width: 100%;
   background: linear-gradient(
@@ -342,7 +353,7 @@ _____________
   border-radius: 50px;
 }
 
-.callback__label input:focus {
+.callback__input input:focus {
   outline: none;
   background: linear-gradient(
     135deg,
@@ -404,7 +415,7 @@ _____________
   margin-bottom: var(--margin-bottom-description);
 }
 
-/* .callback__label input {
+/* .callback__input input {
   width: 100%;
   padding: 0.5em 1em;
   border: var(--border-white);
@@ -420,7 +431,7 @@ _____________
   color: var(--color-text-white);
 } */
 
-.callback__select {
+/* .callback__select {
   position: relative;
   align-self: stretch;
   border: var(--border-white);
@@ -499,6 +510,51 @@ _____________
 
 .callback__item:hover {
   color: var(--color-text-blue);
+} */
+
+.callback__label {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.callback__label input{
+  display: none;
+}
+
+.callback__checkbox {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--color-text-white);
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-right: 10px;
+  cursor: pointer;
+}
+.callback__checkbox::before {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  background-color: var(--color-bg-white);
+  transform: scale(0);
+  transition: transform 0.1s;
+}
+.callback__label input:checked + .callback__checkbox::before {
+  transform: scale(1);
+}
+
+.callback__link{
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-text-min);
+  color: var(--color-text-white);
+}
+
+.callback__link a{
+  color: var(--color-text-white);
 }
 
 .callback__btn {

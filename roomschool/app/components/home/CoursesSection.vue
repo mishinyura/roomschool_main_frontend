@@ -8,10 +8,12 @@
           курсы разработаны экспертами индустрии
         </p>
         <div class="courses__btns">
-          <a href="" class="courses__btn courses__btn_neon">Посмотреть все</a>
-          <button class="courses__btn courses__btn_neoninv">
+          <a href="/courses" class="courses__btn courses__btn_neon"
+            >Посмотреть все</a
+          >
+          <a href="#callbackTitle" class="courses__btn courses__btn_neoninv">
             Узнать больше
-          </button>
+          </a>
         </div>
       </div>
       <div class="courses__list course">
@@ -281,12 +283,12 @@
 </template>
 
 <script>
-import coursesJson from '~/data/courses.json';
+import coursesJson from "~/data/courses.json";
 export default {
   data() {
     return {
       courses: coursesJson,
-    }
+    };
   },
   methods: {
     getLabel(label) {
@@ -619,7 +621,6 @@ _____________
   color: var(--color-text-white);
 }
 
-
 /* ============================== */
 /* MEDIA 1400px (87.5rem) */
 /* ============================== */
@@ -635,7 +636,8 @@ _____________
 @media (max-width: 75rem) {
   .courses__container {
     max-width: var(--max-width-container-tablet);
-    padding: var(--padding-tb-container-tablet) var(--padding-lr-container-tablet);
+    padding: var(--padding-tb-container-tablet)
+      var(--padding-lr-container-tablet);
   }
 
   .courses__title {
@@ -670,7 +672,8 @@ _____________
 @media (max-width: 48rem) {
   .courses__container {
     max-width: var(--max-width-container-mobile);
-    padding: var(--padding-tb-container-mobile) var(--padding-lr-container-mobile);
+    padding: var(--padding-tb-container-mobile)
+      var(--padding-lr-container-mobile);
   }
 
   .courses__head {
@@ -710,6 +713,5 @@ _____________
   .course__description {
     font-size: var(--font-size-text-xs);
   }
-
 }
 </style>

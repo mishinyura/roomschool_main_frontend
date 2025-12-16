@@ -100,6 +100,7 @@ export default {
 <style scoped>
 .select {
   position: relative;
+  margin-bottom: 10px;
 }
 .select__wrapper {
   position: relative;

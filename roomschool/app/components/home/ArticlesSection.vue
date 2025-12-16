@@ -8,12 +8,18 @@
             Мы собираем множество полезной информации совершенно бесплатно
           </p>
         </div>
-        <a href="#" class="blog__btn blog__btn_neon"> Посмотреть все </a>
+        <a href="/articles" class="blog__btn blog__btn_neon"> Посмотреть все </a>
       </div>
       <div class="blog__list posts">
-        <article class="posts__item">
+        <TheArticle
+          class="posts__item"
+          v-for="(article, index) in articles.slice(0, 3)"
+          :key="index"
+          :article="article"
+        />
+        <!-- <article class="posts__item">
           <div class="posts__image">
-            <img src="/media/images/programs_individual.webp" alt="" />
+            <img src="/media/articles/programs_individual.webp" alt="" />
           </div>
           <div class="posts__content">
             <h3 class="posts__title">
@@ -39,7 +45,7 @@
         </article>
         <article class="posts__item">
           <div class="posts__image">
-            <img src="/media/images/programs_main.webp" alt="" />
+            <img src="/media/articles/programs_main.webp" alt="" />
           </div>
           <div class="posts__content">
             <h3 class="posts__title">
@@ -67,7 +73,7 @@
         </article>
         <article class="posts__item">
           <div class="posts__image">
-            <img src="/media/images/programs_national.webp" alt="" />
+            <img src="/media/articles/programs_national.webp" alt="" />
           </div>
           <div class="posts__content">
             <h3 class="posts__title">
@@ -94,14 +100,24 @@
               </span>
             </div>
           </div>
-        </article>
+        </article> -->
       </div>
     </div>
   </section>
 </template>
 
 <script>
-export default {};
+import articlesJson from "~/data/articles.json";
+import TheArticle from "~/components/articles/TheArticle.vue";
+
+export default {
+  components: { TheArticle },
+  data() {
+    return {
+      articles: articlesJson,
+    };
+  },
+};
 </script>
 
 <style scoped>
