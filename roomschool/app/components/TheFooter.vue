@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="footer__form callback">
       <div class="callback__container">
-        <h3 class="callback__title" id="#callbackTitle">Оставьте Ваш телефон для связи</h3>
+        <h3 class="callback__title" id="#callback-title">Оставьте Ваш телефон для связи</h3>
         <p class="callback__description">
           Менеджер свяжется с вами в ближайшие 30 минут
         </p>

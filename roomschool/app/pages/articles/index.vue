@@ -3,6 +3,9 @@
     <div class="main__section head">
       <div class="head__container">
         <h1 class="head__title">Все статьи</h1>
+        <p class="head__description">
+          Мы собираем лучшие статьи, которые помогут вам научиться и развиться
+        </p>
       </div>
     </div>
     <div class="main__section filters">
@@ -153,11 +156,33 @@ export default {
 
 .head__container {
   display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 20px;
   max-width: var(--max-width-container-desktop);
-  margin: auto;
-  padding: 130px var(--padding-lr-container-desktop)
+  padding: 150px var(--padding-lr-container-desktop)
     var(--padding-tb-container-desktop);
+  margin: auto;
+  text-align: center;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.head__title {
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-title-max);
+  font-weight: 500;
+}
+
+.head__description {
+  font-family: var(--font-family-nunito);
+  font-size: var(--font-size-text-max);
+  font-weight: 400;
 }
 
 .filters__container {

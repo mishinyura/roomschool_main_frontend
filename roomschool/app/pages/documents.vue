@@ -11,37 +11,42 @@
     </section>
     <section class="main__section filters">
       <ul class="filters__container">
-        <li class="filters__item active" tabindex="0">Все документы</li>
-        <li class="filters__item" tabindex="0">Договоры</li>
-        <li class="filters__item" tabindex="0">Лицензии</li>
-        <li class="filters__item" tabindex="0">Соглашения</li>
-        <li class="filters__item" tabindex="0">Политики</li>
-        <li class="filters__item" tabindex="0">Правила</li>
+        <li
+          v-for="filter in filters"
+          :key="filter.key"
+          class="filters__item"
+          :class="{ active: activeFilter === filter.key }"
+          @click="setFilter(filter.key)"
+          tabindex="0"
+        >
+          {{ filter.label }}
+        </li>
       </ul>
     </section>
     <section class="main__section docs">
-      <div class="docs__container">
-        <article class="docs__card">
+      <div class="docs__container" v-if="filteredDocuments.length > 0">
+        <article
+          class="docs__card"
+          v-for="(doc, index) in filteredDocuments"
+          :key="index"
+        >
           <div class="docs__head">
-            <div class="docs__icon docs__icon_contract"></div>
+            <div :class="['docs__icon', 'docs__icon_' + doc.type]"></div>
             <div class="docs__name">
-              <span class="docs__type"> Договоры </span>
-              <a href="#" class="docs__title" target="_blank">
-                Договор на оказание образовательных услуг
+              <span class="docs__type"> {{ filters.find((f) => f.key === doc.type).label }} </span>
+              <a :href="doc.url" class="docs__title" target="_blank">
+                {{ doc.title }}
               </a>
             </div>
           </div>
-          <p class="docs__description">
-            Типовой договор между учебным заведением и обучающимся на оказание
-            платных
-          </p>
+          <p class="docs__description">{{ doc.description }}</p>
           <div class="docs__file">
-            <span class="docs__exp">PDF</span>
-            <span class="docs__size">256 KB</span>
+            <span class="docs__exp">{{ doc.extension }}</span>
+            <span class="docs__size">{{ doc.size }}</span>
           </div>
           <div class="docs__btns">
             <a
-              href="#"
+              :href="doc.url"
               class="docs__btn docs__btn_download docs__btn_classic"
               download
               tabindex="0"
@@ -49,247 +54,7 @@
               Скачать
             </a>
             <a
-              href="#"
-              class="docs__btn docs__btn_open"
-              target="_blank"
-              tabindex="0"
-            ></a>
-          </div>
-        </article>
-        <article class="docs__card">
-          <div class="docs__head">
-            <div class="docs__icon docs__icon_license"></div>
-            <div class="docs__name">
-              <span class="docs__type"> Лицензии </span>
-              <a href="#" class="docs__title" target="_blank">
-                Лицензия на образовательную деятельность
-              </a>
-            </div>
-          </div>
-          <p class="docs__description">
-            Лицензия № 12345 от 15.06.2020 на право ведения образовательной
-            деятельности
-          </p>
-          <div class="docs__file">
-            <span class="docs__exp">PDF</span>
-            <span class="docs__size">1.2 MB</span>
-          </div>
-          <div class="docs__btns">
-            <a
-              href="#"
-              class="docs__btn docs__btn_download docs__btn_classic"
-              download
-              tabindex="0"
-            >
-              Скачать
-            </a>
-            <a
-              href="#"
-              class="docs__btn docs__btn_open"
-              target="_blank"
-              tabindex="0"
-            ></a>
-          </div>
-        </article>
-        <article class="docs__card">
-          <div class="docs__head">
-            <div class="docs__icon docs__icon_agreement"></div>
-            <div class="docs__name">
-              <span class="docs__type"> Соглашения </span>
-              <a href="#" class="docs__title" target="_blank">
-                Пользовательское соглашение
-              </a>
-            </div>
-          </div>
-          <p class="docs__description">
-            Пользовательское соглашение для урегулирование договорных отношений между владельцем сайта и его посетителями
-          </p>
-          <div class="docs__file">
-            <span class="docs__exp">PDF</span>
-            <span class="docs__size">471 KB</span>
-          </div>
-          <div class="docs__btns">
-            <a
-              href="/documents/agreement_roomschool.pdf"
-              class="docs__btn docs__btn_download docs__btn_classic"
-              download
-              tabindex="0"
-            >
-              Скачать
-            </a>
-            <a
-              href="/documents/agreement_roomschool.pdf"
-              class="docs__btn docs__btn_open"
-              target="_blank"
-              tabindex="0"
-            ></a>
-          </div>
-        </article>
-        <article class="docs__card">
-          <div class="docs__head">
-            <div class="docs__icon docs__icon_agreement"></div>
-            <div class="docs__name">
-              <span class="docs__type"> Соглашения </span>
-              <a href="#" class="docs__title" target="_blank">
-                Согласие на распространение персональных данных
-              </a>
-            </div>
-          </div>
-          <p class="docs__description">
-            Оформляется при оставлении отзыва или загрузке фото в профиль. Строгое требование ст. 10.1 ФЗ-152
-          </p>
-          <div class="docs__file">
-            <span class="docs__exp">PDF</span>
-            <span class="docs__size">189 KB</span>
-          </div>
-          <div class="docs__btns">
-            <a
-              href="/documents/consent_dissemination_personal_data.pdf"
-              class="docs__btn docs__btn_download docs__btn_classic"
-              download
-              tabindex="0"
-            >
-              Скачать
-            </a>
-            <a
-              href="/documents/consent_dissemination_personal_data.pdf"
-              class="docs__btn docs__btn_open"
-              target="_blank"
-              tabindex="0"
-            ></a>
-          </div>
-        </article>
-        <article class="docs__card">
-          <div class="docs__head">
-            <div class="docs__icon docs__icon_agreement"></div>
-            <div class="docs__name">
-              <span class="docs__type"> Соглашения </span>
-              <a href="#" class="docs__title" target="_blank">
-                Соглашение на обработку персональных данных
-              </a>
-            </div>
-          </div>
-          <p class="docs__description">
-            Согласие на обработку персональных данных в соответствии с 152-ФЗ
-          </p>
-          <div class="docs__file">
-            <span class="docs__exp">PDF</span>
-            <span class="docs__size">297 KB</span>
-          </div>
-          <div class="docs__btns">
-            <a
-              href="/documents/consent_processing_personal_data.pdf"
-              class="docs__btn docs__btn_download docs__btn_classic"
-              download
-              tabindex="0"
-            >
-              Скачать
-            </a>
-            <a
-              href="/documents/consent_processing_personal_data.pdf"
-              class="docs__btn docs__btn_open"
-              target="_blank"
-              tabindex="0"
-            ></a>
-          </div>
-        </article>
-        <article class="docs__card">
-          <div class="docs__head">
-            <div class="docs__icon docs__icon_agreement"></div>
-            <div class="docs__name">
-              <span class="docs__type"> Соглашения </span>
-              <a href="#" class="docs__title" target="_blank">
-                Маректинговое соглашение
-              </a>
-            </div>
-          </div>
-          <p class="docs__description">
-            Оформляется для своевременного информарования об участии в маркетинговых акциях
-          </p>
-          <div class="docs__file">
-            <span class="docs__exp">PDF</span>
-            <span class="docs__size">192 KB</span>
-          </div>
-          <div class="docs__btns">
-            <a
-              href="/documents/marketing_consent.pdf"
-              class="docs__btn docs__btn_download docs__btn_classic"
-              download
-              tabindex="0"
-            >
-              Скачать
-            </a>
-            <a
-              href="/documents/marketing_consent.pdf"
-              class="docs__btn docs__btn_open"
-              target="_blank"
-              tabindex="0"
-            ></a>
-          </div>
-        </article>
-        <article class="docs__card">
-          <div class="docs__head">
-            <div class="docs__icon docs__icon_policy"></div>
-            <div class="docs__name">
-              <span class="docs__type"> Политики </span>
-              <a href="#" class="docs__title" target="_blank">
-                Политика конфиденциальности
-              </a>
-            </div>
-          </div>
-          <p class="docs__description">
-            Политика обработки и защиты персональных данных пользователей
-            платформы
-          </p>
-          <div class="docs__file">
-            <span class="docs__exp">PDF</span>
-            <span class="docs__size">245 KB</span>
-          </div>
-          <div class="docs__btns">
-            <a
-              href="/documents/personal_data_processing_protection_policy.pdf"
-              class="docs__btn docs__btn_download docs__btn_classic"
-              download
-              tabindex="0"
-            >
-              Скачать
-            </a>
-            <a
-              href="/documents/personal_data_processing_protection_policy.pdf"
-              class="docs__btn docs__btn_open"
-              target="_blank"
-              tabindex="0"
-            ></a>
-          </div>
-        </article>
-        <article class="docs__card">
-          <div class="docs__head">
-            <div class="docs__icon docs__icon_rules"></div>
-            <div class="docs__name">
-              <span class="docs__type"> Правила </span>
-              <a href="#" class="docs__title" target="_blank">
-                Правила внутреннего распорядка
-              </a>
-            </div>
-          </div>
-          <p class="docs__description">
-            Правила поведения и внутреннего распорядка для обучающихся
-          </p>
-          <div class="docs__file">
-            <span class="docs__exp">PDF</span>
-            <span class="docs__size">245 KB</span>
-          </div>
-          <div class="docs__btns">
-            <a
-              href="#"
-              class="docs__btn docs__btn_download docs__btn_classic"
-              download
-              tabindex="0"
-            >
-              Скачать
-            </a>
-            <a
-              href="#"
+              :href="doc.url"
               class="docs__btn docs__btn_open"
               target="_blank"
               tabindex="0"
@@ -297,9 +62,47 @@
           </div>
         </article>
       </div>
+      <div v-else class="docs__empty">
+          В этой категории пока нет документов.
+        </div>
     </section>
   </main>
 </template>
+
+<script>
+import documentsJson from "~/data/documents.json";
+
+export default {
+  data() {
+    return {
+      documents: documentsJson,
+      activeFilter: "all",
+      filters: [
+        { label: "Все документы", key: "all" },
+        { label: "Договоры", key: "contract" },
+        { label: "Лицензии", key: "license" },
+        { label: "Соглашения", key: "agreement" },
+        { label: "Политики", key: "policy" },
+        { label: "Иные", key: "rules" },
+      ],
+    };
+  },
+  computed: {
+    // Эта функция автоматически фильтрует список
+    filteredDocuments() {
+      if (this.activeFilter === "all") {
+        return this.documents;
+      }
+      return this.documents.filter((doc) => doc.type === this.activeFilter);
+    },
+  },
+  methods: {
+    setFilter(key) {
+      this.activeFilter = key;
+    },
+  },
+};
+</script>
 
 
 <style scoped>
@@ -329,15 +132,13 @@
 .hero__title {
   font-family: var(--font-family-montserrat);
   font-size: var(--font-size-title-max);
-  font-weight: 600;
-  color: var(--color-text-white);
+  font-weight: 500;
 }
 
 .hero__description {
   font-family: var(--font-family-nunito);
   font-size: var(--font-size-text-max);
-  font-weight: 300;
-  color: var(--color-text-white);
+  font-weight: 400;
 }
 
 .filters {
@@ -592,6 +393,15 @@
 
 .docs__btn_open:focus-visible::before {
   background-color: var(--color-action-white);
+}
+
+.docs__empty{
+  padding: 30px;
+  text-align: center;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-text-xs);
+  font-weight: 400;
+  color: var(--color-text-grey);
 }
 
 /* =========================

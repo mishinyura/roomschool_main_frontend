@@ -1,0 +1,83 @@
+[
+  {
+    "id": 1,
+    "title": "Государственная регистрация",
+    "type": "rules",
+    "description": "Лист записи о государственной регистрации в едином государственном реестре юридических лиц",
+    "url": "/documents/list_egrul.pdf",
+    "size": "175 KB",
+    "extension": "PDF"
+  },
+  {
+    "id": 2,
+    "title": "Договор на оказание образовательных услуг",
+    "type": "contract",
+    "description": "Типовой договор между учебным заведением и обучающимся на оказание платных услуг",
+    "url": "/documents/contract_education.pdf",
+    "size": "256 KB",
+    "extension": "PDF"
+  },
+  {
+    "id": 3,
+    "title": "Лицензия на образовательную деятельность",
+    "type": "license",
+    "description": "Лицензия № 12345 от 15.06.2020 на право ведения образовательной деятельности",
+    "url": "/documents/license_education.pdf",
+    "size": "1.2 MB",
+    "extension": "PDF"
+  },
+  {
+    "id": 4,
+    "title": "Пользовательское соглашение",
+    "type": "agreement",
+    "description": "Пользовательское соглашение для урегулирования договорных отношений между владельцем сайта и его посетителями",
+    "url": "/documents/agreement_roomschool.pdf",
+    "size": "471 KB",
+    "extension": "PDF"
+  },
+  {
+    "id": 5,
+    "title": "Согласие на распространение персональных данных",
+    "type": "agreement",
+    "description": "Оформляется при оставлении отзыва или загрузке фото в профиль. Строгое требование ст. 10.1 ФЗ-152",
+    "url": "/documents/consent_dissemination_personal_data.pdf",
+    "size": "189 KB",
+    "extension": "PDF"
+  },
+  {
+    "id": 6,
+    "title": "Соглашение на обработку персональных данных",
+    "type": "agreement",
+    "description": "Согласие на обработку персональных данных в соответствии с 152-ФЗ",
+    "url": "/documents/consent_processing_personal_data.pdf",
+    "size": "297 KB",
+    "extension": "PDF"
+  },
+  {
+    "id": 7,
+    "title": "Маркетинговое соглашение",
+    "type": "agreement",
+    "description": "Оформляется для своевременного информарования об участии в маркетинговых акциях",
+    "url": "/documents/marketing_consent.pdf",
+    "size": "192 KB",
+    "extension": "PDF"
+  },
+  {
+    "id": 8,
+    "title": "Политика конфиденциальности",
+    "type": "policy",
+    "description": "Политика обработки и защиты персональных данных пользователей платформы",
+    "url": "/documents/personal_data_processing_protection_policy.pdf",
+    "size": "245 KB",
+    "extension": "PDF"
+  },
+  {
+    "id": 9,
+    "title": "Правила внутреннего распорядка",
+    "type": "rules",
+    "description": "Правила поведения и внутреннего распорядка для обучающихся",
+    "url": "/documents/internal_rules.pdf",
+    "size": "245 KB",
+    "extension": "PDF"
+  }
+]

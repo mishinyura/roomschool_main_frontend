@@ -11,7 +11,7 @@
           <a href="/courses" class="courses__btn courses__btn_neon"
             >Посмотреть все</a
           >
-          <a href="#callbackTitle" class="courses__btn courses__btn_neoninv">
+          <a href="#callback-title" class="courses__btn courses__btn_neoninv">
             Узнать больше
           </a>
         </div>
@@ -67,7 +67,7 @@
                 itemprop="price"
                 :content="course.price"
               >
-                {{ (course.price * ((100 - course.discount) * 0.01)) | 0 }}
+                {{ calcPrice(course.price, course.discount) }}
               </span>
               <span
                 class="course__price course__price_old"
@@ -302,6 +302,10 @@ export default {
         default:
           return "Скоро";
       }
+    },
+    calcPrice(price, discount) {
+      const result = price * ((100 - discount) * 0.01);
+      return Math.floor(result);
     },
   },
 };
