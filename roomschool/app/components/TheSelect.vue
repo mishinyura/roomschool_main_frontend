@@ -10,7 +10,9 @@
         :name="name"
         :type="type"
         :data-validate="select"
-        :value="phone"
+        :value="
+          !selected ? '' : options.find((item) => item.value === selected).label
+        "
         readonly
         :placeholder="placeholder"
       />
@@ -106,19 +108,8 @@ export default {
   position: relative;
   z-index: 10;
   display: block;
-}
-.select__wrapper::focus-visible {
-  border-color: var(--color-action-blue);
-}
-.select__wrapper input {
-  width: 100%;
-  height: 100%;
-  padding: 0.5em 1em;
-  box-sizing: border-box;
-  box-shadow: rgba(79, 156, 232, 0.7019607843) 3px 3px 5px 0px,
-    rgba(79, 156, 232, 0.7019607843) 5px 5px 20px 0px;
-  border: 4px solid rgba(169, 212, 255, 0.702);
-  border-radius: var(--radius-max);
+  border-radius: 50px;
+  box-shadow: transparent 0px 0px 5px 0px, transparent 0px 0px 20px 0px;
   font-family: var(--font-family-montserrat);
   font-size: var(--font-size-text-md);
   background: linear-gradient(
@@ -126,8 +117,26 @@ export default {
     rgb(218, 232, 247) 0%,
     rgb(214, 229, 247) 100%
   );
+  transition: box-shadow 0.1s;
+}
+.select__wrapper:hover {
+  box-shadow: rgba(79, 156, 232, 0.7019607843) 0px 0px 5px 0px,
+    rgba(79, 156, 232, 0.7019607843) 0px 0px 20px 0px;
+}
+.select__wrapper input {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  border-radius: 50px;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-text-md);
+  background-color: transparent;
   color: var(--color-text-black);
   cursor: pointer;
+  
 }
 .select__list {
   position: absolute;

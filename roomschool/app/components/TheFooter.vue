@@ -29,7 +29,7 @@
               required
             />
           </label>
-          <TheSelect />
+          <TheSelect :placeholder="'Cпособ связи'" />
           <!-- <TheSelect
             class="callback__input"
             name="method"
@@ -172,7 +172,7 @@
           <h4 class="bottommenu__title">Информация</h4>
           <ul class="bottommenu__list">
             <li class="bottommenu__item">
-              <a href="#" class="bottommenu__link" tabindex="0" target="_blank"> Статьи </a>
+              <a href="/articles" class="bottommenu__link" tabindex="0" target="_blank"> Статьи </a>
             </li>
             <li class="bottommenu__item">
               <a href="#" class="bottommenu__link" tabindex="0" target="_blank">
@@ -186,9 +186,6 @@
             </li>
             <li class="bottommenu__item">
               <a href="#" class="bottommenu__link" tabindex="0" target="_blank"> Полезное </a>
-            </li>
-            <li class="bottommenu__item">
-              <a href="#" class="bottommenu__link" tabindex="0" target="_blank"> Блог </a>
             </li>
           </ul>
         </div>
@@ -214,7 +211,7 @@
               </a>
             </li>
             <li class="bottommenu__item">
-              <a href="#" class="bottommenu__link" tabindex="0" target="_blank"> Вакансии </a>
+              <a href="/vacancies" class="bottommenu__link" tabindex="0" target="_blank"> Вакансии </a>
             </li>
             <li class="bottommenu__item">
               <a href="#" class="bottommenu__link" tabindex="0" target="_blank">
@@ -286,26 +283,13 @@ _____________
 Секция формы обратной связи
 _____________
 */
-.container {
-  position: relative;
-  background: linear-gradient(
-    135deg,
-    rgb(179, 208, 253) 0%,
-    rgb(164, 202, 248) 100%
-  );
-  border-radius: 1000px;
-  padding: 10px;
-  display: grid;
-  place-content: center;
-  z-index: 0;
-  max-width: 300px;
-  margin: 0 10px;
-}
 
 .callback__input {
   position: relative;
   width: 100%;
   border-radius: 50px;
+  box-shadow: transparent 0px 0px 5px 0px,
+    transparent 0px 0px 20px 0px;
   background: linear-gradient(
     135deg,
     rgb(218, 232, 247) 0%,
@@ -314,81 +298,33 @@ _____________
   padding: 5px;
   display: flex;
   align-items: center;
+  box-sizing: border-box;
+  transition: box-shadow 0.1s;
 }
 
-.callback__input::after,
-.callback__input::before {
-  content: "";
+.callback__input:hover{
+  box-shadow: rgba(79, 156, 232, 0.7019607843) 0px 0px 5px 0px,
+    rgba(79, 156, 232, 0.7019607843) 0px 0px 20px 0px;
+}
+
+.callback__input input{
   width: 100%;
-  height: 100%;
-  border-radius: inherit;
-  position: absolute;
-}
-
-.callback__input::before {
-  top: -1px;
-  left: -1px;
-  background: linear-gradient(
-    0deg,
-    rgb(218, 232, 247) 0%,
-    rgb(255, 255, 255) 100%
-  );
-  z-index: -1;
-}
-
-.callback__input::after {
-  bottom: -1px;
-  right: -1px;
-  background: linear-gradient(
-    0deg,
-    rgb(163, 206, 255) 0%,
-    rgb(211, 232, 255) 100%
-  );
-  box-shadow: rgba(79, 156, 232, 0.7019607843) 3px 3px 5px 0px,
-    rgba(79, 156, 232, 0.7019607843) 5px 5px 20px 0px;
-  z-index: -2;
-}
-
-.callback__input input {
-  padding: 10px;
-  width: 100%;
-  background: linear-gradient(
-    135deg,
-    rgb(218, 232, 247) 0%,
-    rgb(214, 229, 247) 100%
-  );
-  border: none;
-  color: var(--color-text-black);
-  font-size: 20px;
+  padding: 1em;
   border-radius: 50px;
+  box-sizing: border-box;
+  font-family: var(--font-family-montserrat);
+  font-size: var(--font-size-text-sm);
+  color: var(--color-text-black);
+  background: transparent;
+  transition: background 0.1s;
 }
 
-.callback__input input:focus {
-  outline: none;
-  background: linear-gradient(
-    135deg,
-    rgb(239, 247, 255) 0%,
-    rgb(214, 229, 247) 100%
-  );
+.callback__input input:hover{
+  background: white;
 }
 
-.search__icon {
-  width: 50px;
-  aspect-ratio: 1;
-  border-left: 2px solid white;
-  border-top: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-  border-radius: 50%;
-  padding-left: 12px;
-  margin-right: 10px;
-}
-
-.search__icon:hover {
-  border-left: 3px solid white;
-}
-
-.search__icon path {
-  fill: white;
+.callback__input input:focus-visible{
+  background: white;
 }
 
 .callback {
