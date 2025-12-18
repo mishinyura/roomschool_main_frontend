@@ -703,7 +703,7 @@ _____________
 
   .courses__btns {
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
   }
 
   .course {

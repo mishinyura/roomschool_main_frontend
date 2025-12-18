@@ -2,7 +2,9 @@
   <footer class="footer">
     <div class="footer__form callback">
       <div class="callback__container">
-        <h3 class="callback__title" id="#callback-title">Оставьте Ваш телефон для связи</h3>
+        <h3 class="callback__title" id="#callback-title">
+          Оставьте Ваш телефон для связи
+        </h3>
         <p class="callback__description">
           Менеджер свяжется с вами в ближайшие 30 минут
         </p>
@@ -56,10 +58,14 @@
             </ul>
           </div> -->
           <label class="callback__label">
-            <input type="checkbox" checked name="agreement" required>
+            <input type="checkbox" checked name="agreement" required />
             <span class="callback__checkbox"></span>
-            <span class="callback__link">Отправляя вы соглашаетесь на 
-              <a href="/documents/consent_processing_personal_data.pdf" target="_blank">
+            <span class="callback__link"
+              >Отправляя вы соглашаетесь на
+              <a
+                href="/documents/consent_processing_personal_data.pdf"
+                target="_blank"
+              >
                 обработку персональных данных
               </a>
             </span>
@@ -127,32 +133,36 @@
           <h4 class="bottommenu__title">Документы</h4>
           <ul class="bottommenu__list">
             <li class="bottommenu__item">
-              <a href="#" class="bottommenu__link" tabindex="0">
+              <a href="#" class="bottommenu__link" tabindex="0" target="_blank">
                 Договор на оказание образовательных услуг
               </a>
             </li>
             <li class="bottommenu__item">
-              <a href="#" class="bottommenu__link" tabindex="0">
+              <a href="#" class="bottommenu__link" tabindex="0" target="_blank">
                 Лицензия на образовательную деятельность
               </a>
             </li>
             <li class="bottommenu__item">
-              <a href="#" class="bottommenu__link" tabindex="0">
+              <a href="/documents/consent_processing_personal_data.pdf" class="bottommenu__link" tabindex="0" target="_blank">
                 Соглашение на обработку персональных данных
               </a>
             </li>
             <li class="bottommenu__item">
-              <a href="#" class="bottommenu__link" tabindex="0">
+              <a href="/documents/privacy_policy.pdf" class="bottommenu__link" tabindex="0" target="_blank">
                 Политика конфиденциальности
               </a>
             </li>
             <li class="bottommenu__item">
-              <a href="/documents/agreement_roomschool.pdf" class="bottommenu__link" tabindex="0">
+              <a
+                href="/documents/agreement_roomschool.pdf"
+                class="bottommenu__link"
+                tabindex="0"
+              >
                 Пользовательское соглашение
               </a>
             </li>
             <li class="bottommenu__item">
-              <a href="#" class="bottommenu__link" tabindex="0">
+              <a href="/documents/list_egrul.pdf" class="bottommenu__link" tabindex="0" target="_blank">
                 Регистрационные документы
               </a>
             </li>
@@ -162,23 +172,23 @@
           <h4 class="bottommenu__title">Информация</h4>
           <ul class="bottommenu__list">
             <li class="bottommenu__item">
-              <a href="#" class="bottommenu__link" tabindex="0"> Статьи </a>
+              <a href="#" class="bottommenu__link" tabindex="0" target="_blank"> Статьи </a>
             </li>
             <li class="bottommenu__item">
-              <a href="#" class="bottommenu__link" tabindex="0">
+              <a href="#" class="bottommenu__link" tabindex="0" target="_blank">
                 Ответы на вопросы
               </a>
             </li>
             <li class="bottommenu__item">
-              <a href="#" class="bottommenu__link" tabindex="0">
+              <a href="#" class="bottommenu__link" tabindex="0" target="_blank">
                 Спортивные секции
               </a>
             </li>
             <li class="bottommenu__item">
-              <a href="#" class="bottommenu__link" tabindex="0"> Полезное </a>
+              <a href="#" class="bottommenu__link" tabindex="0" target="_blank"> Полезное </a>
             </li>
             <li class="bottommenu__item">
-              <a href="#" class="bottommenu__link" tabindex="0"> Блог </a>
+              <a href="#" class="bottommenu__link" tabindex="0" target="_blank"> Блог </a>
             </li>
           </ul>
         </div>
@@ -186,28 +196,28 @@
           <h4 class="bottommenu__title">Служебные</h4>
           <ul class="bottommenu__list">
             <li class="bottommenu__item">
-              <a href="#" class="bottommenu__link" tabindex="0"> О школе </a>
+              <a href="#" class="bottommenu__link" tabindex="0" target="_blank"> О школе </a>
             </li>
             <li class="bottommenu__item">
-              <a href="#" class="bottommenu__link" tabindex="0">
+              <a href="#" class="bottommenu__link" tabindex="0" target="_blank">
                 Техническая поддержка
               </a>
             </li>
             <li class="bottommenu__item">
-              <a href="#" class="bottommenu__link" tabindex="0">
+              <a href="#" class="bottommenu__link" tabindex="0" target="_blank">
                 Администрация школы
               </a>
             </li>
             <li class="bottommenu__item">
-              <a href="#" class="bottommenu__link" tabindex="0">
+              <a href="#" class="bottommenu__link" tabindex="0" target="_blank">
                 Контактная информация
               </a>
             </li>
             <li class="bottommenu__item">
-              <a href="#" class="bottommenu__link" tabindex="0"> Вакансии </a>
+              <a href="#" class="bottommenu__link" tabindex="0" target="_blank"> Вакансии </a>
             </li>
             <li class="bottommenu__item">
-              <a href="#" class="bottommenu__link" tabindex="0">
+              <a href="#" class="bottommenu__link" tabindex="0" target="_blank">
                 Сотрудничество
               </a>
             </li>
@@ -518,7 +528,7 @@ _____________
   margin-bottom: 20px;
 }
 
-.callback__label input{
+.callback__label input {
   display: none;
 }
 
@@ -547,13 +557,13 @@ _____________
   transform: scale(1);
 }
 
-.callback__link{
+.callback__link {
   font-family: var(--font-family-montserrat);
   font-size: var(--font-size-text-min);
   color: var(--color-text-white);
 }
 
-.callback__link a{
+.callback__link a {
   color: var(--color-text-white);
 }
 
@@ -655,7 +665,11 @@ _____________
   background: #dd4b39;
 }
 
+
+
 .bottommenu__container {
+  column-width: 250px;
+  column-gap: 40px;
   margin-bottom: 50px;
   max-width: var(--max-width-container-desktop);
   margin: auto;
@@ -663,10 +677,12 @@ _____________
 }
 
 .bottommenu__wrapper {
+  display: inline-block;
+  break-inside: avoid;
+  -webkit-column-break-inside: avoid; /* Для старых браузеров */
+  page-break-inside: avoid;
   margin-bottom: 20px;
   padding: 1em 0;
-  border-bottom: var(--border-white);
-  border-radius: var(--radius-lg);
 }
 
 .bottommenu__title {
@@ -675,18 +691,16 @@ _____________
 }
 
 .bottommenu__list {
-  display: flex;
+  /* display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: var(--margin-cards);
+  gap: var(--margin-cards); */
 }
 
 .bottommenu__item {
   position: relative;
   display: flex;
   align-items: center;
-  border: var(--border-white);
-  border-radius: var(--radius-md);
   font-family: var(--font-family-montserrat);
   font-size: var(--font-size-text-sm);
   font-weight: 400;

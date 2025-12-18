@@ -683,7 +683,7 @@ _____________
 }
 
 .header.scrolled .panel__btn_chat {
-  background-color: var(--color-btn-blue);
+  /* background-color: var(--color-btn-blue); */
   border-color: transparent;
 }
 
@@ -925,6 +925,10 @@ _____________
     -webkit-backdrop-filter: blur(16px) saturate(150%);
   }
 
+  .search {
+    bottom: 55px;
+  }
+
   .panel__btn {
     min-width: 40px;
     min-height: 40px;
@@ -949,5 +953,7 @@ _____________
     height: 10%;
     order: 4;
   }
+
+
 }
 </style>

@@ -184,6 +184,8 @@ _____________
 }
 
 .reviews__slide {
+  display: flex;
+  align-items: stretch;
   min-height: 350px;
   box-sizing: border-box;
   border-radius: var(--radius-lg);
@@ -197,7 +199,9 @@ _____________
 }
 
 .reviews__block {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
   padding: 2em;
 }
 
@@ -219,6 +223,7 @@ _____________
 }
 
 .reviews__course {
+  align-self: self-start;
   display: inline-block;
   margin-bottom: 20px;
   padding: 0.4em 1em;
@@ -231,13 +236,7 @@ _____________
 }
 
 .reviews__review {
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
-  max-height: calc(1.5em * 5);
-  margin-bottom: auto;
-  overflow: hidden;
-  text-overflow: ellipsis;
+  flex-grow: 1;
   font-size: var(--font-size-text-lg);
 }
 

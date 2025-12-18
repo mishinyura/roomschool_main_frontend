@@ -233,11 +233,10 @@ _____________
   }
 
   .hero__btn {
-    display: block;
     width: 100%;
   }
 
-  .hero__btn_classic {
+  .hero__btn_neon {
     margin-right: 0;
     margin-bottom: var(--margin-cards);
   }

@@ -7,7 +7,7 @@
             "author": {
                 "name": "Анастасия Тарасенко",
                 "post": "Психолог",
-                "image": "jul.webp"
+                "image": "psychologist.webp"
             },
             "createdAt": "2025-12-12",
             "duration": 20,
@@ -36,7 +36,7 @@
             "author": {
                 "name": "Александра Ломоносова",
                 "post": "Педагог",
-                "image": ""
+                "image": "teacher.webp"
             },
             "createdAt": "2025-12-12",
             "duration": 13,
@@ -63,9 +63,9 @@
             "category": "Русский язык",
             "title": "Самые сложные слова: почему мы ошибаемся?",
             "author": {
-                "name": "Елена Соколова",
-                "post": "Филолог",
-                "image": ""
+                "name": "Артур Павлов",
+                "post": "Директор",
+                "image": "director.webp"
             },
             "createdAt": "2025-12-15",
             "duration": 8,
@@ -92,9 +92,9 @@
             "category": "Советы родителям",
             "title": "Нужен ли родительский контроль над домашним заданием?",
             "author": {
-                "name": "Мария Васильева",
+                "name": "Виктор Логинов",
                 "post": "Детский психолог",
-                "image": ""
+                "image": "men.webp"
             },
             "createdAt": "2025-12-18",
             "duration": 6,
@@ -108,7 +108,7 @@
         "comments": [
             {
                 "author": "Анна",
-                "image": "anna_mom.webp",
+                "image": "",
                 "text": "С третьим пунктом про вопросы вместо критики полностью согласна, работает!",
                 "createdAt": "2025-12-19",
                 "likes": 3
