@@ -1,0 +1,27 @@
+services:
+  # Наше приложение Nuxt
+  nuxt_app:
+    # Путь к папке, где лежит Dockerfile (относительно docker-compose.yml)
+    build: .
+    container_name: roomschool_nuxt
+    restart: always
+    environment:
+      - PORT=3000
+      # Если у тебя есть API на другом домене, укажи его тут:
+      # - NUXT_PUBLIC_API_BASE=https://api.roomschool.ru
+
+  # Веб-сервер Nginx
+  nginx:
+    image: nginx:stable-alpine
+    container_name: roomschool_nginx
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      # Прокидываем наш новый конфиг
+      - ./nginx.conf:/etc/nginx/conf.d/default.conf
+      # Прокидываем сертификаты с хоста внутрь контейнера (ВАЖНО!)
+      - /etc/letsencrypt:/etc/letsencrypt
+    depends_on:
+      - nuxt_app
