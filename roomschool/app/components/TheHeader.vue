@@ -197,7 +197,7 @@
         ></button>
         <a href="#" class="panel__btn panel__btn_login" tabindex="0"> </a>
         <button class="panel__btn panel__btn_chat panel__btn_grey" tabindex="0">
-          <span class="panel__btn-text"> Подобрать </span>
+          <span class="panel__btn-text" @click="isOpenMessenger = true"> Подобрать </span>
         </button>
         <button
           :class="['panel__btn panel__btn_burger', { open: isOpenSubMenu }]"
@@ -213,12 +213,14 @@
 </template>
 
 <script>
+
 export default {
   data() {
     return {
       isOpenSubMenu: false,
       isOpenSearch: false,
       isScrolled: false,
+      isOpenMessenger: useState('messenger_state')
     };
   },
   methods: {
@@ -671,8 +673,16 @@ _____________
   background-color: var(--color-action-white);
 }
 
+.header.scrolled .panel__btn:hover {
+  background-color: var(--color-action-blue);
+}
+
 .panel__btn:focus-visible {
   background-color: var(--color-action-white);
+}
+
+.header.scrolled .panel__btn:focus-visible {
+  background-color: var(--color-action-blue);
 }
 
 .panel__btn_chat {
